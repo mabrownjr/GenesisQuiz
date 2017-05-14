@@ -11,15 +11,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:paddingRight="10dp"
     >
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
         android:layout_marginBottom="10dp"
         android:text="The Creation Quiz"
-        android:textSize="48dp"/>
+        android:textSize="42dp"
+
+        android:layout_gravity="center"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -32,66 +34,112 @@
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
+        android:layout_margin="8dp"
+        android:id="@+id/correctRivers"
+        android:textSize="20dp"
         android:text="Pison, Gihon, Hiddekel, Euphrates"/>
 
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
+        android:layout_margin="8dp"
+        android:id="@+id/wrongRivers"
+        android:textSize="20dp"
         android:text="Nile, Red Sea, Mediterranean Sea, Black Sea "/>
 
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
+        android:layout_margin="8dp"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/wrongRivers2"
+        android:textSize="20dp"
         android:text="Gulf of Aden, Gulf of Oman, Caspan Sea, Arabian Sea"/>
 
 
+
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="10dp"
+        style="@style/questionsStyle"
         android:text="2. True or False? Tree of Life and the Tree of Knowledge of Good and Evil are the names of the two trees? "
-        android:textSize="20dp"/>
+       />
 
-    <LinearLayout
+   <CheckBox
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="True"
+       android:textSize="20dp"
+       android:layout_marginTop="8dp"
+       android:layout_marginLeft="8dp"
+       android:id="@+id/trueTrees"
+       />
+
+    <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="center_horizontal">
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="True"
-            android:layout_margin="10dp"/>
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="False"
-            android:layout_margin="10dp"/>
-    </LinearLayout>
+        android:text="False"
+        android:textSize="20dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/falseTrees"
+        />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:text="3. Which tree did God say not to eat of?"
-        android:textSize="20dp"
-        android:layout_marginBottom="10dp"/>
+        style="@style/questionsStyle"
+        android:text="3. Which tree did God say not to eat of?"/>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
-        android:hint="Name of Tree"/>
+        android:hint="Name of Tree"
+        android:layout_marginBottom="10dp"/>
 
+    <TextView
+        style="@style/questionsStyle"
+        android:text="4. God took what from Man to make Woman?"
+        />
 
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:hint="Enter here"
+        android:layout_marginBottom="10dp"/>
 
+    <TextView
+        style="@style/questionsStyle"
+        android:text="5. True or False? God rested on the 6th Day."
+        />
 
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="True"
+        android:textSize="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        android:id="@+id/trueRest"
+        />
 
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="False"
+        android:textSize="20dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/falseRest"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="10dp"
+        android:onClick="submitQuiz"
+        android:text="Submit Quiz"/>
 </LinearLayout>
 </ScrollView>
