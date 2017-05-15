@@ -31,7 +31,11 @@
         android:textSize="20dp"
         android:layout_marginBottom="10dp"/>
 
-    <CheckBox
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioRivers">
+    <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
@@ -39,7 +43,7 @@
         android:textSize="20dp"
         android:text="Pison, Gihon, Hiddekel, Euphrates"/>
 
-    <CheckBox
+    <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
@@ -47,7 +51,7 @@
         android:textSize="20dp"
         android:text="Nile, Red Sea, Mediterranean Sea, Black Sea "/>
 
-    <CheckBox
+    <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
@@ -55,15 +59,17 @@
         android:id="@+id/wrongRivers2"
         android:textSize="20dp"
         android:text="Gulf of Aden, Gulf of Oman, Caspan Sea, Arabian Sea"/>
-
-
-
+    </RadioGroup>
     <TextView
         style="@style/questionsStyle"
         android:text="2. True or False? Tree of Life and the Tree of Knowledge of Good and Evil are the names of the two trees? "
        />
 
-   <CheckBox
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioTrees">
+   <RadioButton
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
        android:text="True"
@@ -73,7 +79,7 @@
        android:id="@+id/trueTrees"
        />
 
-    <CheckBox
+    <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="False"
@@ -83,7 +89,7 @@
         android:layout_marginBottom="20dp"
         android:id="@+id/falseTrees"
         />
-
+    </RadioGroup>
     <TextView
         style="@style/questionsStyle"
         android:text="3. Which tree did God say not to eat of?"/>
@@ -93,7 +99,8 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
         android:hint="Name of Tree"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginBottom="10dp"
+        android:id="@+id/forbiddenTree"/>
 
     <TextView
         style="@style/questionsStyle"
@@ -105,14 +112,19 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
         android:hint="Enter here"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginBottom="10dp"
+        android:id="@+id/creationPart"/>
 
     <TextView
         style="@style/questionsStyle"
         android:text="5. True or False? God rested on the 6th Day."
         />
 
-    <CheckBox
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioRest">
+    <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="True"
@@ -122,7 +134,7 @@
         android:id="@+id/trueRest"
         />
 
-    <CheckBox
+    <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="False"
@@ -132,7 +144,7 @@
         android:layout_marginBottom="20dp"
         android:id="@+id/falseRest"
         />
-
+    </RadioGroup>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -141,5 +153,15 @@
         android:layout_marginBottom="10dp"
         android:onClick="submitQuiz"
         android:text="Submit Quiz"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:onClick="resetQuiz"
+        android:text="Reset"/>
 </LinearLayout>
 </ScrollView>
