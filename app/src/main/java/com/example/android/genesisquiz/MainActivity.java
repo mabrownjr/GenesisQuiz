@@ -12,7 +12,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     RadioGroup rd_Rivers, rd_Trees, rd_Rest;
-    RadioButton correctRivers, wrongRivers, wrongRivers2, trueTree, falseTree;
+    RadioButton correctRivers, wrongRivers, wrongRivers2, trueTree, falseRest;
     EditText forbiddenTree, creationPart;
 
     int quizPoints = 0;
@@ -28,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
         quizPoints += question1();
         quizPoints += question2();
         quizPoints += question3();
+        quizPoints += question4();
+        quizPoints += question5();
 
         Context context = getApplicationContext();
         CharSequence text = "You have " + quizPoints + " points correct.";
@@ -42,11 +44,23 @@ public class MainActivity extends AppCompatActivity {
         rd_Trees = (RadioGroup) findViewById(R.id.radioTrees);
         rd_Rest= (RadioGroup) findViewById(R.id.radioRest);
 
+        forbiddenTree.setText(null);
+        creationPart.setText(null);
+
         rd_Rivers.clearCheck();
         rd_Trees.clearCheck();
         rd_Rest.clearCheck();
 
+
+
         quizPoints = 0;
+
+        Context context = getApplicationContext();
+        CharSequence text = "Quiz has been reset!";
+        int duration = Toast.LENGTH_SHORT;
+
+        Toast toast = Toast.makeText(context, text, duration);
+        toast.show();
     }
     public int question1(){
         correctRivers = (RadioButton) findViewById(R.id.correctRivers);
@@ -71,13 +85,30 @@ public class MainActivity extends AppCompatActivity {
     }
     public int question3(){
 
-        String answer = "Tree of Knowledge of Good and Evil";
+        String answer = "Tree of knowledge of good and evil";
         forbiddenTree = (EditText) findViewById(R.id.forbiddenTree);
-        String input = forbiddenTree.toString();
+        String input = forbiddenTree.getText().toString();
 
-        input = input.replaceAll("\\s", "");
+        if(input.trim().equalsIgnoreCase(answer.trim())){
+            return 1;
+        } else
+            return 0;
+    }
+    public int question4(){
 
-        if(input == answer.replaceAll("\\s", "")){
+        String answer = "rib";
+        creationPart = (EditText) findViewById(R.id.creationPart);
+        String input = creationPart.getText().toString();
+
+        if(input.trim().equalsIgnoreCase(answer.trim())){
+            return 1;
+        } else
+            return 0;
+    }
+    public int question5(){
+        falseRest = (RadioButton) findViewById(R.id.falseRest);
+
+        if (falseRest.isChecked()){
             return 1;
         }
 
