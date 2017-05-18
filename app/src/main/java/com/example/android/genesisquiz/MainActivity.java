@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -14,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     RadioGroup rd_Rivers, rd_Trees, rd_Rest;
     RadioButton correctRivers, wrongRivers, wrongRivers2, trueTree, falseRest;
     EditText forbiddenTree, creationPart;
+    CheckBox stars, animals, moon, sun;
 
     int quizPoints = 0;
 
@@ -30,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         quizPoints += question3();
         quizPoints += question4();
         quizPoints += question5();
+        quizPoints += question6();
 
         Context context = getApplicationContext();
         CharSequence text = "You have " + quizPoints + " points correct.";
@@ -51,6 +54,10 @@ public class MainActivity extends AppCompatActivity {
         rd_Trees.clearCheck();
         rd_Rest.clearCheck();
 
+        stars.setChecked(false);
+        animals.setChecked(false);
+        moon.setChecked(false);
+        sun.setChecked(false);
 
 
         quizPoints = 0;
@@ -113,5 +120,32 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return 0;
+    }
+    public int question6(){
+
+        stars = (CheckBox) findViewById(R.id.star_correct);
+        animals = (CheckBox) findViewById(R.id.animals_wrong);
+        moon = (CheckBox) findViewById(R.id.moon_correct);
+        sun = (CheckBox) findViewById(R.id.sun_correct);
+
+        int points = 0;
+
+        if (stars.isChecked()){
+            points += 1;
+        }
+
+        if (moon.isChecked()) {
+            points += 1;
+        }
+
+        if (animals.isChecked()){
+            points -= 1;
+        }
+
+        if (sun.isChecked()){
+            points += 1;
+        }
+
+        return points;
     }
 }

@@ -14,11 +14,19 @@
     android:paddingRight="10dp"
     >
 
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/tree"
+        android:scaleType="fitCenter"
+        android:layout_gravity="center"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
         android:text="The Creation Quiz"
+        android:textColor="#D50000"
         android:textSize="42dp"
 
         android:layout_gravity="center"/>
@@ -38,26 +46,22 @@
     <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
         android:id="@+id/correctRivers"
-        android:textSize="20dp"
-        android:text="Pison, Gihon, Hiddekel, Euphrates"/>
+        android:text="Pison, Gihon, Hiddekel, Euphrates"
+        style="@style/radionstyle"/>
 
     <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
+        style="@style/radionstyle"
         android:id="@+id/wrongRivers"
-        android:textSize="20dp"
         android:text="Nile, Red Sea, Mediterranean Sea, Black Sea "/>
 
     <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:layout_marginBottom="20dp"
+        style="@style/radionstyle"
         android:id="@+id/wrongRivers2"
-        android:textSize="20dp"
         android:text="Gulf of Aden, Gulf of Oman, Caspan Sea, Arabian Sea"/>
     </RadioGroup>
     <TextView
@@ -73,9 +77,7 @@
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
        android:text="True"
-       android:textSize="20dp"
-       android:layout_marginTop="8dp"
-       android:layout_marginLeft="8dp"
+       style="@style/radionstyle"
        android:id="@+id/trueTrees"
        />
 
@@ -83,10 +85,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="False"
-        android:textSize="20dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="20dp"
+        style="@style/radionstyle"
         android:id="@+id/falseTrees"
         />
     </RadioGroup>
@@ -127,10 +126,8 @@
     <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        style="@style/radionstyle"
         android:text="True"
-        android:textSize="20dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginLeft="8dp"
         android:id="@+id/trueRest"
         />
 
@@ -138,13 +135,42 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="False"
-        android:textSize="20dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="20dp"
+        style="@style/radionstyle"
         android:id="@+id/falseRest"
         />
     </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="6. What was created on the 4th Day?"
+        style="@style/questionsStyle"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stars"
+        style="@style/checkboxstyle"
+        android:id="@+id/star_correct"/>
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Animals"
+        style="@style/checkboxstyle"
+        android:id="@+id/animals_wrong"/>
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Moon"
+        style="@style/checkboxstyle"
+        android:id="@+id/moon_correct"/>
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sun"
+        style="@style/checkboxstyle"
+        android:id="@+id/sun_correct"/>
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -8,15 +8,30 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-
-
     <!-- Questions style theme. -->
     <style name="questionsStyle">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">20dp</item>
-        <item name="android:layout_marginBottom">20dp</item>
-        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:layout_margin">10dp</item>
+    </style>
+
+    <!-- RadioButtons Style -->
+    <style name="radionstyle">
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <!-- Short Answer EditText Style -->
+    <style name="shortanswerstyle">
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <!-- RadioButtons Style -->
+    <style name="checkboxstyle">
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:textSize">20sp</item>
     </style>
 
 </resources>
