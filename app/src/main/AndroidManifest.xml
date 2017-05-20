@@ -4,9 +4,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/court_counter"
+        android:icon="@mipmap/tree"
         android:label="Genesis"
-        android:roundIcon="@mipmap/court_counter"
+        android:roundIcon="@mipmap/tree"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity

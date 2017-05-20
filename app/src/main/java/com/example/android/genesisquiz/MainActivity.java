@@ -17,8 +17,8 @@ public class MainActivity extends AppCompatActivity {
     EditText forbiddenTree, creationPart;
     CheckBox stars, animals, moon, sun;
 
-    int quizPoints = 0;
-
+    int quizPoints;
+    int totalQuizPoints;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,22 +27,84 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void submitQuiz(View view){
-        quizPoints += question1();
-        quizPoints += question2();
-        quizPoints += question3();
-        quizPoints += question4();
-        quizPoints += question5();
-        quizPoints += question6();
+        trueTree = (RadioButton) findViewById(R.id.trueTrees);
+        correctRivers = (RadioButton) findViewById(R.id.correctRivers);
+        wrongRivers = (RadioButton) findViewById(R.id.wrongRivers);
+        wrongRivers2 = (RadioButton) findViewById(R.id.wrongRivers2);
+        forbiddenTree = (EditText) findViewById(R.id.forbiddenTree);
+        creationPart = (EditText) findViewById(R.id.creationPart);
+        falseRest = (RadioButton) findViewById(R.id.falseRest);
+        stars = (CheckBox) findViewById(R.id.star_correct);
+        animals = (CheckBox) findViewById(R.id.animals_wrong);
+        moon = (CheckBox) findViewById(R.id.moon_correct);
+        sun = (CheckBox) findViewById(R.id.sun_correct);
+
+        String treeAnswer = "Tree of knowledge of good and evil";
+        String input = forbiddenTree.getText().toString();
+        String ribAnswer = "rib";
+
+
+        if (trueTree.isChecked())
+            quizPoints += incrementPoints(quizPoints);
+            totalQuizPoints = quizPoints;
+
+        if(correctRivers.isChecked())
+            quizPoints = incrementPoints(quizPoints);
+            totalQuizPoints = quizPoints;
+
+        if(input.trim().equalsIgnoreCase(treeAnswer.trim())){
+            quizPoints = incrementPoints(quizPoints);
+            totalQuizPoints = quizPoints;
+        } else
+            quizPoints -= decrementPoints(quizPoints);
+            totalQuizPoints = quizPoints;
+
+        input = creationPart.getText().toString();
+
+        if(input.trim().equalsIgnoreCase(ribAnswer.trim())){
+            quizPoints = incrementPoints(quizPoints);
+            totalQuizPoints = quizPoints;
+        } else
+            quizPoints = decrementPoints(quizPoints);
+            totalQuizPoints = quizPoints;
+
+        if (falseRest.isChecked()){
+            quizPoints = incrementPoints(quizPoints);
+            totalQuizPoints = quizPoints;
+        }else
+            quizPoints = decrementPoints(quizPoints);
+            totalQuizPoints = quizPoints;
+
+        if (stars.isChecked())
+            quizPoints = incrementPoints(quizPoints);
+            totalQuizPoints = quizPoints;
+
+
+        if (moon.isChecked())
+            quizPoints = incrementPoints(quizPoints);
+            totalQuizPoints = quizPoints;
+
+        if (animals.isChecked()){
+            quizPoints = decrementPoints(quizPoints);
+            totalQuizPoints = quizPoints;
+        }
+
+        if (sun.isChecked()){
+            quizPoints = incrementPoints(quizPoints);
+            totalQuizPoints = quizPoints;
+        }
 
         Context context = getApplicationContext();
-        CharSequence text = "You have " + quizPoints + " points correct.";
+        CharSequence text = "You have " + totalQuizPoints + " points correct.";
         int duration = Toast.LENGTH_SHORT;
 
         Toast toast = Toast.makeText(context, text, duration);
         toast.show();
 
+        resetQuiz();
+
     }
-    public void resetQuiz(View view){
+    public void resetQuiz(){
         rd_Rivers = (RadioGroup) findViewById(R.id.radioRivers);
         rd_Trees = (RadioGroup) findViewById(R.id.radioTrees);
         rd_Rest= (RadioGroup) findViewById(R.id.radioRest);
@@ -62,90 +124,20 @@ public class MainActivity extends AppCompatActivity {
 
         quizPoints = 0;
 
-        Context context = getApplicationContext();
-        CharSequence text = "Quiz has been reset!";
-        int duration = Toast.LENGTH_SHORT;
-
-        Toast toast = Toast.makeText(context, text, duration);
-        toast.show();
     }
-    public int question1(){
-        correctRivers = (RadioButton) findViewById(R.id.correctRivers);
-        wrongRivers = (RadioButton) findViewById(R.id.wrongRivers);
-        wrongRivers2 = (RadioButton) findViewById(R.id.wrongRivers2);
+    public int incrementPoints(int points){
+        if (points == 8){
+            return points;
+        }else
+            points++;
+            return points;
 
-
-        if(correctRivers.isChecked()){
-            return 1;
-        }
-
-        return 0;
     }
-    public int question2(){
-        trueTree = (RadioButton) findViewById(R.id.trueTrees);
-
-        if (trueTree.isChecked()){
-            return 1;
-        }
-
-        return 0;
-    }
-    public int question3(){
-
-        String answer = "Tree of knowledge of good and evil";
-        forbiddenTree = (EditText) findViewById(R.id.forbiddenTree);
-        String input = forbiddenTree.getText().toString();
-
-        if(input.trim().equalsIgnoreCase(answer.trim())){
-            return 1;
-        } else
-            return 0;
-    }
-    public int question4(){
-
-        String answer = "rib";
-        creationPart = (EditText) findViewById(R.id.creationPart);
-        String input = creationPart.getText().toString();
-
-        if(input.trim().equalsIgnoreCase(answer.trim())){
-            return 1;
-        } else
-            return 0;
-    }
-    public int question5(){
-        falseRest = (RadioButton) findViewById(R.id.falseRest);
-
-        if (falseRest.isChecked()){
-            return 1;
-        }
-
-        return 0;
-    }
-    public int question6(){
-
-        stars = (CheckBox) findViewById(R.id.star_correct);
-        animals = (CheckBox) findViewById(R.id.animals_wrong);
-        moon = (CheckBox) findViewById(R.id.moon_correct);
-        sun = (CheckBox) findViewById(R.id.sun_correct);
-
-        int points = 0;
-
-        if (stars.isChecked()){
-            points += 1;
-        }
-
-        if (moon.isChecked()) {
-            points += 1;
-        }
-
-        if (animals.isChecked()){
-            points -= 1;
-        }
-
-        if (sun.isChecked()){
-            points += 1;
-        }
-
-        return points;
+    public int decrementPoints(int points){
+        if (points == 0){
+            return points;
+        }else
+            points--;
+            return points;
     }
 }
