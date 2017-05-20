@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">GenesisQuiz</string>
+    <string name="quizName">The Creation Quiz</string>
+    <string name="question1">1. What are the names of the 4 rivers? (Choose one) </string>
+    <string name="question2">2. True or False? Tree of Life and the Tree of Knowledge of Good and Evil are the names of the two trees? </string>
+    <string name="question3">3. Which tree did God say not to eat of?</string>
+    <string name="question4">4. God took what from Man to make Woman?</string>
+    <string name="question5">5. True or False? God rested on the 6th Day.</string>
+    <string name="question6">6. What was created on the 4th Day?</string>
+    <string name="trueRest">True</string>
+    <string name="falseRest">False</string>
+    <string name="correctRivers">Pison, Gihon, Hiddekel, Euphrates</string>
+    <string name="wrongRivers">Nile, Red Sea, Mediterranean Sea, Black Sea </string>
+    <string name="wrongRivers2">Gulf of Aden, Gulf of Oman, Caspan Sea, Arabian Sea</string>
+    <string name="trueTrees">True</string>
+    <string name="falseTrees">False</string>
+    <string name="moon">Moon</string>
+    <string name="sun">Sun</string>
+    <string name="animals">Animals</string>
+    <string name="stars">Stars</string>
+    <string name="submitQuiz">Submit Quiz</string>
 </resources>

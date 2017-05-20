@@ -25,7 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
-        android:text="The Creation Quiz"
+        android:text="@string/quizName"
         android:textColor="#D50000"
         android:textSize="42dp"
 
@@ -35,7 +35,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
-        android:text="1. What are the names of the 4 rivers? (Choose one) "
+        android:text="@string/question1"
         android:textSize="20dp"
         android:layout_marginBottom="10dp"/>
 
@@ -47,7 +47,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/correctRivers"
-        android:text="Pison, Gihon, Hiddekel, Euphrates"
+        android:text="@string/correctRivers"
         style="@style/radionstyle"/>
 
     <RadioButton
@@ -55,18 +55,18 @@
         android:layout_height="wrap_content"
         style="@style/radionstyle"
         android:id="@+id/wrongRivers"
-        android:text="Nile, Red Sea, Mediterranean Sea, Black Sea "/>
+        android:text="@string/wrongRivers"/>
 
     <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/radionstyle"
         android:id="@+id/wrongRivers2"
-        android:text="Gulf of Aden, Gulf of Oman, Caspan Sea, Arabian Sea"/>
+        android:text="@string/wrongRivers2"/>
     </RadioGroup>
     <TextView
         style="@style/questionsStyle"
-        android:text="2. True or False? Tree of Life and the Tree of Knowledge of Good and Evil are the names of the two trees? "
+        android:text="@string/question2"
        />
 
     <RadioGroup
@@ -76,7 +76,7 @@
    <RadioButton
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
-       android:text="True"
+       android:text="@string/trueTrees"
        style="@style/radionstyle"
        android:id="@+id/trueTrees"
        />
@@ -84,14 +84,14 @@
     <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="False"
+        android:text="@string/falseTrees"
         style="@style/radionstyle"
         android:id="@+id/falseTrees"
         />
     </RadioGroup>
     <TextView
         style="@style/questionsStyle"
-        android:text="3. Which tree did God say not to eat of?"/>
+        android:text="@string/question3"/>
 
     <EditText
         android:layout_width="match_parent"
@@ -103,7 +103,7 @@
 
     <TextView
         style="@style/questionsStyle"
-        android:text="4. God took what from Man to make Woman?"
+        android:text="@string/question4"
         />
 
     <EditText
@@ -116,7 +116,7 @@
 
     <TextView
         style="@style/questionsStyle"
-        android:text="5. True or False? God rested on the 6th Day."
+        android:text="@string/question5"
         />
 
     <RadioGroup
@@ -127,14 +127,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/radionstyle"
-        android:text="True"
+        android:text="@string/trueRest"
         android:id="@+id/trueRest"
         />
 
     <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="False"
+        android:text="@string/falseRest"
         style="@style/radionstyle"
         android:id="@+id/falseRest"
         />
@@ -143,41 +143,41 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="6. What was created on the 4th Day?"
+        android:text="@string/question6"
         style="@style/questionsStyle"/>
 
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Stars"
+        android:text="@string/stars"
         style="@style/checkboxstyle"
         android:id="@+id/star_correct"/>
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Animals"
+        android:text="@string/animals"
         style="@style/checkboxstyle"
         android:id="@+id/animals_wrong"/>
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Moon"
+        android:text="@string/moon"
         style="@style/checkboxstyle"
         android:id="@+id/moon_correct"/>
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sun"
+        android:text="@string/sun"
         style="@style/checkboxstyle"
         android:id="@+id/sun_correct"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
+        android:gravity="center"
         android:layout_marginTop="40dp"
         android:layout_marginBottom="10dp"
         android:onClick="submitQuiz"
-        android:text="Submit Quiz"/>
+        android:text="@string/submitQuiz"/>
 </LinearLayout>
 </ScrollView>
