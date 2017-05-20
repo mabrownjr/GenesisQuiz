@@ -44,52 +44,30 @@ public class MainActivity extends AppCompatActivity {
         String ribAnswer = "rib";
 
 
-        if (trueTree.isChecked())
+        if (trueTree.isChecked()) {
             quizPoints += incrementPoints(quizPoints);
             totalQuizPoints = quizPoints;
-
-        if(correctRivers.isChecked())
+        }
+        if(correctRivers.isChecked()) {
             quizPoints = incrementPoints(quizPoints);
             totalQuizPoints = quizPoints;
-
+        }
         if(input.trim().equalsIgnoreCase(treeAnswer.trim())){
             quizPoints = incrementPoints(quizPoints);
             totalQuizPoints = quizPoints;
-        } else
-            quizPoints -= decrementPoints(quizPoints);
-            totalQuizPoints = quizPoints;
-
+        }
         input = creationPart.getText().toString();
 
         if(input.trim().equalsIgnoreCase(ribAnswer.trim())){
             quizPoints = incrementPoints(quizPoints);
             totalQuizPoints = quizPoints;
-        } else
-            quizPoints = decrementPoints(quizPoints);
-            totalQuizPoints = quizPoints;
-
+        }
         if (falseRest.isChecked()){
             quizPoints = incrementPoints(quizPoints);
             totalQuizPoints = quizPoints;
-        }else
-            quizPoints = decrementPoints(quizPoints);
-            totalQuizPoints = quizPoints;
-
-        if (stars.isChecked())
-            quizPoints = incrementPoints(quizPoints);
-            totalQuizPoints = quizPoints;
-
-
-        if (moon.isChecked())
-            quizPoints = incrementPoints(quizPoints);
-            totalQuizPoints = quizPoints;
-
-        if (animals.isChecked()){
-            quizPoints = decrementPoints(quizPoints);
-            totalQuizPoints = quizPoints;
         }
 
-        if (sun.isChecked()){
+        if (stars.isChecked() && moon.isChecked() && !animals.isChecked() && sun.isChecked()){
             quizPoints = incrementPoints(quizPoints);
             totalQuizPoints = quizPoints;
         }
