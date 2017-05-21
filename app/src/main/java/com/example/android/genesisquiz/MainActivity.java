@@ -111,11 +111,4 @@ public class MainActivity extends AppCompatActivity {
             return points;
 
     }
-    public int decrementPoints(int points){
-        if (points == 0){
-            return points;
-        }else
-            points--;
-            return points;
-    }
 }

@@ -27,149 +27,15 @@
         android:layout_marginBottom="10dp"
         android:text="@string/quizName"
         android:textColor="#D50000"
-        android:textSize="42dp"
-
+        android:textSize="42sp"
         android:layout_gravity="center"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:text="@string/question1"
-        android:textSize="20dp"
-        android:layout_marginBottom="10dp"/>
-
-    <RadioGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/radioRivers">
-    <RadioButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/correctRivers"
-        android:text="@string/correctRivers"
-        style="@style/radionstyle"/>
-
-    <RadioButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        style="@style/radionstyle"
-        android:id="@+id/wrongRivers"
-        android:text="@string/wrongRivers"/>
-
-    <RadioButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        style="@style/radionstyle"
-        android:id="@+id/wrongRivers2"
-        android:text="@string/wrongRivers2"/>
-    </RadioGroup>
-    <TextView
-        style="@style/questionsStyle"
-        android:text="@string/question2"
-       />
-
-    <RadioGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/radioTrees">
-   <RadioButton
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:text="@string/trueTrees"
-       style="@style/radionstyle"
-       android:id="@+id/trueTrees"
-       />
-
-    <RadioButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/falseTrees"
-        style="@style/radionstyle"
-        android:id="@+id/falseTrees"
-        />
-    </RadioGroup>
-    <TextView
-        style="@style/questionsStyle"
-        android:text="@string/question3"/>
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:hint="Name of Tree"
-        android:layout_marginBottom="10dp"
-        android:id="@+id/forbiddenTree"/>
-
-    <TextView
-        style="@style/questionsStyle"
-        android:text="@string/question4"
-        />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:hint="Enter here"
-        android:layout_marginBottom="10dp"
-        android:id="@+id/creationPart"/>
-
-    <TextView
-        style="@style/questionsStyle"
-        android:text="@string/question5"
-        />
-
-    <RadioGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/radioRest">
-    <RadioButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        style="@style/radionstyle"
-        android:text="@string/trueRest"
-        android:id="@+id/trueRest"
-        />
-
-    <RadioButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/falseRest"
-        style="@style/radionstyle"
-        android:id="@+id/falseRest"
-        />
-    </RadioGroup>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/question6"
-        style="@style/questionsStyle"/>
-
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/stars"
-        style="@style/checkboxstyle"
-        android:id="@+id/star_correct"/>
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/animals"
-        style="@style/checkboxstyle"
-        android:id="@+id/animals_wrong"/>
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/moon"
-        style="@style/checkboxstyle"
-        android:id="@+id/moon_correct"/>
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/sun"
-        style="@style/checkboxstyle"
-        android:id="@+id/sun_correct"/>
+    <include layout="@layout/question1"/>
+    <include layout="@layout/question2"/>
+    <include layout="@layout/question3"/>
+    <include layout="@layout/question4"/>
+    <include layout="@layout/question5"/>
+    <include layout="@layout/question6"/>
 
     <Button
         android:layout_width="match_parent"
